@@ -84,7 +84,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
 
                holidayName.setText(holidayNow);
                holidayImage.setImageResource(R.drawable.labour_day);
-               
+
 
            }
 
