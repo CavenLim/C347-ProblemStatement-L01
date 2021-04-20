@@ -14,6 +14,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
     private ArrayList<Holiday> holiday;
     private Context context;
     private TextView holidayName;
+    private TextView holidayDate;
     private ImageView holidayImage;
 
 
@@ -40,6 +41,7 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
         holidayName = (TextView) rowView.findViewById(R.id.textView);
         // Get the ImageView object
         holidayImage = (ImageView) rowView.findViewById(R.id.imageView);
+        holidayDate = (TextView) rowView.findViewById(R.id.textViewDate);
 
 
         // The parameter "position" is the index of the
@@ -54,17 +56,26 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
            if (currHoliday.getIsImage().equals("chinese new year")) {
                holidayName.setText(holidayNow);
                holidayImage.setImageResource(R.drawable.cny);
+               holidayDate.setText(currHoliday.getHolidayDate());
 
+
+           }
+           else if (currHoliday.getIsImage().equals("national day")){
+               holidayName.setText(holidayNow);
+               holidayImage.setImageResource(R.drawable.national_day);
+               holidayDate.setText(currHoliday.getHolidayDate());
 
            }
             else if (currHoliday.getIsImage().equals("hari raya haji")){
                holidayName.setText(holidayNow);
                 holidayImage.setImageResource(R.drawable.hari_raya_haji);
+               holidayDate.setText(currHoliday.getHolidayDate());
 
             }
            else if (currHoliday.getIsImage().equals("hari raya puasa")){
                holidayName.setText(holidayNow);
                holidayImage.setImageResource(R.drawable.hari_raya_puasa);
+               holidayDate.setText(currHoliday.getHolidayDate());
 
            }
 
@@ -72,18 +83,21 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
 
             holidayName.setText(holidayNow);
             holidayImage.setImageResource(R.drawable.christmas);
+               holidayDate.setText(currHoliday.getHolidayDate());
 
            }
            else if (currHoliday.getIsImage().equals("deepavali")){
 
                holidayName.setText(holidayNow);
                holidayImage.setImageResource(R.drawable.deepavali);
+               holidayDate.setText(currHoliday.getHolidayDate());
 
            }
            else if (currHoliday.getIsImage().equals("labour day")){
 
                holidayName.setText(holidayNow);
                holidayImage.setImageResource(R.drawable.labour_day);
+               holidayDate.setText(currHoliday.getHolidayDate());
 
 
            }
